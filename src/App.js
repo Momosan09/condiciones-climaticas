@@ -1,38 +1,45 @@
 import { useState, useEffect } from 'react';
 import Atmosfera from "./Atmosfera";
+import Vientos from "./Viento";
 import DiaNoche from "./DiaNoche";
 
 function App() {
 
-const [ Texto, setTexto] = useState("");
+const [ atmosfera, setAtmosfera] = useState(-1);
+const [ Viento, setViento] = useState(-1);
 
-let nubosidad;
 
-if(Texto >= 0 && Texto <= 10){
+let nubosidad,
+    viento;
+
+if(atmosfera >= 0 && atmosfera <= 10){
   nubosidad="None 0-1.0 cm";
 }
-if(Texto >= 11 && Texto <= 20){
+if(atmosfera >= 11 && atmosfera <= 20){
   nubosidad="Scant clouds 1.1 - 2.0 cm";
 }
-if(Texto >= 21 && Texto <= 30){
+if(atmosfera >= 21 && atmosfera <= 30){
   nubosidad="Scattered clouds 2.1 - 3.0 cm";
 }
-if(Texto >= 31 && Texto <= 40){
+if(atmosfera >= 31 && atmosfera <= 40){
   nubosidad="Slightly overcast 3.1 - 4.0 cm";
 }
-if(Texto >= 41 && Texto <= 50){
+if(atmosfera >= 41 && atmosfera <= 50){
   nubosidad="Moderately overcast 4.1 - 5.0 cm";
 }
-if(Texto >= 51 && Texto <= 65){
+if(atmosfera >= 51 && atmosfera <= 65){
   nubosidad="Mostly overcast 5.1 - 6.5 cm";
 }
-if(Texto >= 66 && Texto <= 80){
+if(atmosfera >= 66 && atmosfera <= 80){
   nubosidad="Completely overcast 6.6 - 8.0 cm";
 }
-if(Texto >= 81 && Texto <= 100){
+if(atmosfera >= 81 && atmosfera <= 100){
   nubosidad="Dense clouds, little light 8.1 - 10 cm";
 }
-if(Texto > 100 || Texto < 0){
+if(atmosfera == -1){
+  nubosidad="Ingrese Numero"
+}
+if(atmosfera > 100 || atmosfera < -1){
   nubosidad="Err"
 }
   return (
@@ -40,21 +47,31 @@ if(Texto > 100 || Texto < 0){
   <section>
     <div className="InputsContainer">
     <div className="Title"></div>
+
     <div className="DayNight">
     <DiaNoche/>
     </div>
-    <Atmosfera
-    Texto={Texto}
-    setTexto={setTexto}
-    />
 
+    <Atmosfera
+    atmosfera={atmosfera}
+    setAtmosfera={setAtmosfera}
+    />
     <h2>{nubosidad}</h2>
+
+    <div>
+      <Vientos
+      Viento={Viento}
+      setViento={setViento}
+      />
+      <h2>{viento}</h2>
+    </div>
+
     </div>
   </section>  
 
 
-    </>
-  );
+</>
+);
 }
 
 export default App;

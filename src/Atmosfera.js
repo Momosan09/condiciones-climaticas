@@ -1,31 +1,32 @@
 const Atmosfera = props =>{
 
-const { Texto, setTexto } = props;
+const { atmosfera, 
+        setAtmosfera,
+
+    } = props;
 
 
-console.log(Texto);
 
+/* console.log("Atmosfera = " + atmosfera); */
 
-if(Texto === "2"){
-
-}
-    return(
-        <>
-{/* <button onClick={Aleatorio}>a</button> */}
-
+return(
+<>
+<label>Atmosfera
+{/*     <button onClick={Aleatorio()}></button> */}
 <input type="number"
         min="0"
         max="100"
         minLength="1"
         maxLength="3"
-        onChange={e => setTexto(e.target.value)} value={Texto}
+        onChange={e => setAtmosfera(e.target.value)} value={atmosfera}
         />
 
-    <div>
-        <h5>{}</h5>
-    </div>
+</label>
 </>
-    );
-    
+
+
+);
+
 }
+
 export default Atmosfera;
