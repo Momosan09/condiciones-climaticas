@@ -1,13 +1,35 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+body{
+    background-color: #333333;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+/* TOP************************************************/
+.InputsContainer{
+    background-color: rgba(248, 248, 248, 0.938);
+    width: 40%;
+    height: 600px;
+    padding: 20px;
+
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.Title{
+    background-color: rgb(173, 165, 173);
+    border: solid 1px black;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
 }
+.Title::after{
+    content: "Condiciones Climaticas";
+}
+/* Inputs dia noche */
+.LabelForInputDay::after{
+    content: "Dia ";
+}
+.LabelForInputNight::after{
+    content: "Noche";
+}
+/* Inputs dia noche */
+/* TOP************************************************/
