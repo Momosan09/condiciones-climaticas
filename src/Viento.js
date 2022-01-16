@@ -10,15 +10,15 @@ const Vientos = props =>{
             e.preventDefault();}
 return(
 <>
-{/* <label>Vientos
+<label>Vientos
     <input type="number"
     min="0"
-    max="100"
+    max="50"
     minLength="1"
-    maxLength="3"
+    maxLength="2"
     onChange={e => setViento(e.target.value)} value={Viento}
     />
-</label> */}
+</label>
 
             <label>Vientos
         <select onChange={handleChange}>

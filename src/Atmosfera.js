@@ -3,7 +3,7 @@ const Atmosfera = props =>{
 const { atmosfera, 
         setAtmosfera,
 
-    } = props;
+} = props;
 
 
 

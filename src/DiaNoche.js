@@ -1,13 +1,9 @@
 /* import { ReactComponent as Logo } from './moon-crescent.svg'; */
 const DiaNoche = props => {
 
-
-
-
     const handleChange = e => {
         console.log("Tiempo = " + e.target.value);
         e.preventDefault();
-
 
 };
 
